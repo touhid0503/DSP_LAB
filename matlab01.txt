@@ -1,0 +1,35 @@
+clear all;
+close all;
+clc;
+t=1:0.1:10;
+signal1= t.*3+sin(t);
+signal2= t.*3-tan(t);
+signal3= t.*3+sec(t);
+signal4= t.*3-cot(t);
+
+
+subplot(221)
+plot(t,signal1,'Linewidth', 2);
+xlabel('time');
+ylabel('Amplitude');
+title('t.*3+sin(t)');
+
+subplot(222)
+plot(t,signal2,'Linewidth', 2);
+xlabel('time');
+ylabel('Amplitude');
+title('t.*3+sin(t)');
+
+
+subplot(223)
+plot(t,signal3,'Linewidth', 2);
+xlabel('time');
+ylabel('Amplitude');
+title('t.*3+sin(t)');
+
+
+subplot(224)
+plot(t,signal4,'Linewidth', 2);
+xlabel('time');
+ylabel('Amplitude');
+title('t.*3+sin(t)');
