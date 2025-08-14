@@ -1,0 +1,13 @@
+clear all;
+close all;
+clc;
+t=0:0.000001:0.05;
+f=50;
+signal1= 10*sin(2*pi*f*t); 
+signal2= 10*cos(2*pi*f*t); 
+
+plot(t,signal1,'Linewidth',2);
+hold on;
+
+plot(t,signal2,'Linewidth',2);
+
