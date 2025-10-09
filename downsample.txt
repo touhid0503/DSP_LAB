@@ -1,0 +1,32 @@
+clc
+clear all
+close all
+x=[-5 -6 1 2 5 -3 4 6 -2 6 3 4];
+n_x=-5:6;
+y=[];
+n_y=[];
+n1=2*n_x;
+
+for i=1:length(n1)
+    idx=find(n_x==n1(i));
+       if ~isempty(idx)
+           y=[y,x(idx)];
+           n_y=[n_y,n_x(i)];
+       end
+end
+
+subplot(211);
+stem(n_x,x,'filled');
+xlim([-6 7]);
+xlabel('n');
+ylabel('x(n)');
+title('Original Signal x(n)');
+grid on;
+
+subplot(212);
+stem(n_y,y,'filled');
+xlim([-6 7]);
+xlabel('n');
+ylabel('x(2n)');
+title('Transformed Signal x(2n)');
+grid on;
